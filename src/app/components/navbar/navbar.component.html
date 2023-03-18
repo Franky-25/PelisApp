@@ -1,0 +1,27 @@
+<nav class="navbar navbar-dark bg-dark navbar-expand-sm">
+  <br>
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="/home">CataPelis</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="true" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        </ul>
+
+        <div class="d-flex">
+          <input #txtBuscar
+                 (keyup.enter)="buscarPelicula( txtBuscar.value )"
+                 class="form-control mr-2"
+                 type="search"
+                 placeholder="Buscar película"
+                 aria-label="Search">
+
+          <button (click)="buscarPelicula( txtBuscar.value )"
+                 class="btn btn-outline-success" type="submit">Buscar</button>
+        </div>
+      </div>
+    </div>
+</nav>
